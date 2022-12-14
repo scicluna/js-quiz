@@ -1,0 +1,70 @@
+:root{
+    --backgroundcolor: rgb(77, 77, 220);
+    --answercolor: steelblue;   
+    --textcolor: rgba(255, 255, 255, 0.668);
+}
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--backgroundcolor);
+    color: var(--textcolor)
+}
+
+header {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:10vh;
+}
+
+header > button {
+    font-size: 25px;
+    border-radius: 15px;
+    height:40%;
+}
+
+
+#time-space {
+    display: flex;
+    font-size: 30px;
+    justify-content: space-around;
+    width:20%;
+    text-align: left;
+}
+
+#game-space {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+}
+
+#game-space h2 {
+    font-size: 50px;
+    height:30%;
+    background-color: var(--answercolor);
+    margin: 5px;
+    border: 5px solid rgba(112, 128, 144, 0.746);
+}
+
+#game-space p {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    height:10%;
+    border: 5px solid rgba(112, 128, 144, 0.746);
+    border-radius: 8px;
+    margin: 5px;
+    background-color: var(--answercolor)
+}
+
+#game-space p:hover{
+    border: 10px solid rgba(77, 109, 237, 0.746);
+    transition: ease 300ms;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+}
