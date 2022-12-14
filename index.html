@@ -9,14 +9,22 @@
 </head>
 <body>
 
-        <header>
-            <button id="high-score">View high scores</button>
+    <header>
+        <button id="high-score">View high scores</button>
+        <div id="time-space">
+            <p>Time:</p>
+            <p id="time">75</p>
+        </div>
+    </header>
+
+    <div class="hide" id="pregame">
+        <main>
+            <h1>Javascript Quiz Challenge</h1>
+            <p>Try to answer as many questions as you can about Javascript within a 75 second time limit. Incorrect answers will deduct 10 seconds from your remaining time. Good luck!</p>
             <button id="start">Start</button>
-            <div id="time-space">
-                <p>Time:</p>
-                <p id="time">75</p>
-            </div>
-        </header>
+        </main>
+    </div>
+
     <div class="hide" id="game-page-one">
         <main id="game-space">
             <h2 id="prompt"></h2>
@@ -28,27 +36,33 @@
             </ol>
             <h3 id="result"></h3>
         </main>
-        
-        <footer>
-            <p>By John Scicluna</p>
-            <a>Github</a>
-        </footer>
     </div>
-    <div id="game-page-two">
-        <h2>Finished</h2>
-        <div id="score">
-            <p>Your final score is</p>
-            <p id="final-score"></p>
-        </div>
-        <div id="submit-score">
-            <p>Enter Initials:</p>
-            <input>
-            <button>Submit</button>
-        </div>
 
-
-
+    <div class="hide" id="game-page-two">
+        <main>
+            <h2>Finished</h2>
+            <div id="score">
+                <p>Your final score is</p>
+                <p id="final-score">22</p>
+            </div>
+            <div id="submit-score">
+                <p>Enter Initials:</p>
+                <input id="initials">
+                <button id="submit">Submit</button>
+            </div>
+            <button id="try-again">Try Again</button>
+        </main>
     </div>
+
+    <div class="" id="gallery">
+        <main>
+            <button id="back">Back</button>
+            <h1>Hall of Fame</h1>
+            <ol id="high-scores">
+            </ol>
+        </main>
+    </div>
+
 
 
 
