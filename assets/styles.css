@@ -48,18 +48,29 @@ header > button {
     border: 5px solid rgba(112, 128, 144, 0.746);
 }
 
-#game-space p {
+#game-space h3 {
+    font-size:50px;
+    height: 10%;
+    text-align: center;
+}
+
+#game-space ol{
+    margin:0;
+    padding:0;
+    height:30vh
+}
+#game-space li {
     display: flex;
     align-items: center;
     font-size: 35px;
-    height:10%;
+    height:20%;
     border: 5px solid rgba(112, 128, 144, 0.746);
     border-radius: 8px;
     margin: 5px;
     background-color: var(--answercolor)
 }
 
-#game-space p:hover{
+#game-space li:hover{
     border: 10px solid rgba(77, 109, 237, 0.746);
     transition: ease 300ms;
 }
@@ -68,3 +79,8 @@ footer {
     display: flex;
     justify-content: space-around;
 }
+
+.hide {
+    display:none;
+}
+
