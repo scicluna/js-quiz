@@ -54,10 +54,14 @@ header > button {
     text-align: center;
 }
 
+#prompt {
+    width:80%;
+}
 #game-space ol{
     margin:0;
     padding:0;
-    height:30vh
+    height:30vh;
+    width: 75%;
 }
 #game-space li {
     display: flex;
@@ -78,13 +82,17 @@ header > button {
 footer {
     display: flex;
     justify-content: space-around;
+    position: absolute;
+    bottom:40px;
+    width:100%
 }
+
 
 .hide {
     display:none;
 }
 
-#game-page-two main, #pregame main{
+#game-page-two main, #pregame main,  #game-page-one main{
     display: flex;
     flex-direction: column;
     height:80vh;
@@ -97,10 +105,10 @@ footer {
     width:80%
 }
 
-
 #score {
     display: flex;
-    width:40%
+    width:40%;
+    justify-content: center;
 }
 
 #score #final-score {
@@ -140,8 +148,20 @@ button:hover {
     color:gold;
 }
 
+#gallery main li {
+    font-size: 40px;
+}
+
 #gallery main button {
     width:15%;
     height:5%;
     margin: 15px;
+}
+
+#gallery ol {
+    font-size: 20px;
+}
+
+footer a {
+    text-decoration: none;
 }
