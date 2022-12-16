@@ -25,7 +25,6 @@ header > button {
     height:40%;
 }
 
-
 #time-space {
     display: flex;
     font-size: 30px;
@@ -54,9 +53,6 @@ header > button {
     text-align: center;
 }
 
-#prompt {
-    width:80%;
-}
 #game-space ol{
     margin:0;
     padding:0;
@@ -79,17 +75,16 @@ header > button {
     transition: ease 300ms;
 }
 
+#prompt {
+    width:80%;
+}
+
 footer {
     display: flex;
     justify-content: space-around;
     position: absolute;
     bottom:40px;
     width:100%
-}
-
-
-.hide {
-    display:none;
 }
 
 #game-page-two main, #pregame main,  #game-page-one main{
@@ -101,6 +96,7 @@ footer {
     font-size: 30px;
     text-align: center;
 }
+
 #pregame main p {
     width:80%
 }
@@ -154,8 +150,10 @@ button:hover {
 
 #gallery main button {
     width:15%;
-    height:5%;
+    height:35px;
     margin: 15px;
+    font-size: 20px;
+    border-radius: 15px;
 }
 
 #gallery ol {
@@ -164,4 +162,8 @@ button:hover {
 
 footer a {
     text-decoration: none;
+}
+
+.hide {
+    display:none;
 }
