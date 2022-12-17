@@ -124,8 +124,8 @@ const questionbank = {
     },
     20: {
         prompt: "What array method would you call inorder to join two arrays together?",
-        choices: [".join", ".combine", ".together", ".concat"],
-        answer: ".concat"
+        choices: [".join()", ".combine()", ".together()", ".concat()"],
+        answer: ".concat()"
     },
     21: {
         prompt: "How do we feel about Javascript?",
@@ -179,7 +179,7 @@ const questionbank = {
     },
     30: {
         prompt: "What does the syntax: while do?",
-        choices: ["It runs a code block repeatedly for so long as a conditional is still true", "It checks the state of a code block", "", "While isn't a real syntax"],
+        choices: ["It runs a code block repeatedly for so long as a conditional is still true", "It checks the state of a code block", "It ends a for-loop", "While isn't a real syntax"],
         answer: "It runs a code block repeatedly for so long as a conditional is still true"
     },
     31: {
@@ -187,7 +187,53 @@ const questionbank = {
         choices: ["let x = 5", "x = 5", "init x = 5", "x is 5"],
         answer: "let x = 5"
     },
+    32: {
+        prompt: "What method would we call upon to sort an array?",
+        choices: [".arrange()", ".reorder()", ".order()", ".sort()"],
+        answer: ".sort()"
+    },
+    33: {
+        prompt: "What method would we call upon to determine the length of a string or array?",
+        choices: [".length", ".size", ".number", ".value"],
+        answer: ".length"
+    },
+    34: {
+        prompt: "What method allows us to turn a string into an array?",
+        choices: [".splice()", ".split()", ".slice()", ".join()"],
+        answer: ".split()"
+    },
+    35: {
+        prompt: "What method would we call upon to make letters in a string lowercase?",
+        choices: [".toLowerCase()", ".LowerCase()", ".small", ".toUpperCase()"],
+        answer: ".toLowerCase()"
+    },
+    36: {
+        prompt: "What syntax do we use to get a random number 0-1",
+        choices: ["Math.random()", "math.random()", "random.math()", ".roulette()"],
+        answer: "Math.random()"
+    },
+    37: {
+        prompt: "What array method do we use to reverse the order of the array?",
+        choices: [".direction()", ".reversesort()", ".change()", ".reverse()"],
+        answer: ".reverse()"
+    },
+    38: {
+        prompt: "What does the following code output? let x; console.log(x)",
+        choices: ["undefined", "NaN", "x", "let x"],
+        answer: "undefined"
+    },
+    39: {
+        prompt: "What syntax is a shortcut for adding one to a variable value?",
+        choices: ["++", "+=", "+", "+1"],
+        answer: "++"
+    },
+    40: {
+        prompt: "What array index always points to the last element of the array?",
+        choices: ["[arraylength]", "[length]", "[array.length]", "[array.length-1]"],
+        answer: "[array.length-1]"
+    },
 }
+
 
 //Useful variables
 let questionPrompt;
@@ -215,12 +261,12 @@ function generateNewQuestion(){
     questionChoices = question.choices
     questionAnswer = question.answer
     //alg to shuffle an array provided by https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj
-    questionChoices.sort((a,b) => 0.5 - Math.random())
-    writeDom()
+    questionChoices.sort((a,b) => 0.5 - Math.random()) //***** Optional for grader: How does this work?
+    writeQuestion()
 }
 
 //Write answers to the DOM
-function writeDom(){
+function writeQuestion(){
     qPrompt.innerText = questionPrompt
     answerOne.innerText = questionChoices[0]
     answerTwo.innerText = questionChoices[1]
@@ -270,7 +316,7 @@ function answerCheck(e){
         } else timeLeft.innerText -= 10
         generateNewQuestion()
     }
-    //If we're out of time, the game ends and the timer clears
+    //If we're out of time, the game ends and the timer clears. Just an extra check to make sure the game ends on time.
     if (timeLeft.innerText<=0){
         clearInterval(time)
         endGame()
@@ -301,7 +347,7 @@ function endGame(){
 function submitHighScore(){
     let highscore;
     highscores.sort().reverse()
-    //Some formatting hacks to makesure that the highscore list is ordered from top score to lowest score
+    //Some formatting hacks to make sure that the highscore list is ordered from top score to lowest score
     if (correct < 10){
         highscore = `0${correct} ${initials.value}`
     } else highscore = `${correct} ${initials.value}`
@@ -328,7 +374,7 @@ function enterGallery(){
     pregame.classList.add("hide")
     gallery.classList.remove("hide")
     
-    //Sorting the highscores (see below for credit)
+    //Sorting the highscores
     highscores.sort().reverse()
 
     //Displaying all of the highscores
@@ -341,7 +387,7 @@ function enterGallery(){
     }
 }
 
-//Moving us from our gallery back to the pregame screen
+//Moving us back to the pregame screen
 function back(){
     gallery.classList.add("hide")
     gameTwo.classList.add("hide")
